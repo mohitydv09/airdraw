@@ -110,7 +110,7 @@ def main():
         model = airdraw(model_resnet, freeze_backbone=True)
 
         #loading pretrained model and moving it to GPU
-        model = torch.load(r"resnet_based_cnn.pth")
+        model = torch.load(r"resnet_based_cnn.pth", weights_only=False)
         model.to(device)
         model.eval()
 
